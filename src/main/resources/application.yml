@@ -1,0 +1,98 @@
+server:
+  port: 0
+spring:
+  servlet:
+    multipart:
+      max-file-size: 12Mb
+      max-request-size: 12Mb
+bsa:
+  views:
+    MoneyView.csv:
+    - Registration Number
+    - Registered By First Name
+    - Registered By Last Name
+    - Registered By Address
+    - Registered By City
+    - Registered By State
+    - Registered By Postal Code
+    - Registered By Phone
+    - Registered By Email
+    - Registration Date/Time
+    - Effective Date
+    - Registration Cost
+    - Total Amount Paid
+    - Registrant Cost
+    - First Name
+    - Last Name
+    - Type
+    - Telephone
+    - Email
+    - Address
+    - City
+    - State
+    - Postal Code
+    OtherAdvertisingView.csv:
+    - Company Name
+    - Registration Cost
+    - Total Amount Paid
+    - Number of Months for organization website / event link
+    - Number of Months for organization website / event link:Cost
+    - Please list the Month(s) for the organization website / event link
+    - Please list the organization website / event link
+    - Number of posts for organization website / event link
+    - Number of posts for organization website / event link:Cost
+    - Please list the organization website / event link1
+    - Number of quarters * Number of items
+    - Number of quarters * Number of items:Cost
+    - Please describe each item and the quarter(s) you want it placed.
+    - Number of flyers / brochures* Number of month(s)
+    - Number of flyers / brochures* Number of month(s):Cost
+    - Please describe each flyer / brochure and the month(s) you want it placed.
+    - Full Page Ad (7 1/2 w x 10 h)
+    - Full Page Ad (7 1/2 w x 10 h):Cost
+    - Half Page Ad (7 1/2 w x 4 1/2 h)
+    - Half Page Ad (7 1/2 w x 4 1/2 h):Cost
+    - Quarter Page Ad (3 1/2 w x 4 1/2 h)
+    - Quarter Page Ad (3 1/2 w x 4 1/2 h):Cost
+    - Please list the quarter you want the ad to start.
+    - Summer Camp T-Shirt Sponsorship
+    - Summer Camp T-Shirt Sponsorship:Cost
+    - Annual Report Sponsorship
+    - Annual Report Sponsorship:Cost
+    - 'Placement of your organization website/event link: $50 per link. '
+    - 'Placement of your organization website/event link: $50 per link. :Cost'
+    - 'Placement of your organization logo with website/link: $100 per link.'
+    - 'Placement of your organization logo with website/link: $100 per link.:Cost'
+    - 'Placement of your organization pictures with website/link: $200 per link.'
+    - 'Placement of your organization pictures with website/link: $200 per link.:Cost'
+    - Contact Name
+    - Contact email
+    - Contact Phone Number
+    - Please list your company's URL
+    - Registration Number
+    - Registration Date/Time
+    TradeshowView.csv:
+    - Company Name
+    - Exhibitor Table 18 ft. Frontage
+    - Exhibitor Table 18 ft. Frontage:Cost
+    - Exhibitor Booth 9 ft. Frontage
+    - Exhibitor Booth 9 ft. Frontage:Cost
+    - I need Electricity for a display at the Tradeshow
+    - I would like to donate a door prize for the Tradeshow
+    - Describe the door prize you are donating
+    - Meal Ticket
+    - Meal Ticket:Cost
+    - Event Booklet - Full Page Ad $100
+    - Event Booklet - Full Page Ad $100:Cost
+    - Event Booklet - Half Page Ad $50
+    - Event Booklet - Half Page Ad $50:Cost
+    - Flyers on Information Table $25
+    - Flyers on Information Table $25:Cost
+    - Please list your company's URL
+    - Event Sponsor $5,000
+    - Event Sponsor $5,000:Cost
+    - Room Sponsor $1,000
+    - Room Sponsor $1,000:Cost
+    - Contact Name
+    - Contact email
+    - Contact Phone Number
