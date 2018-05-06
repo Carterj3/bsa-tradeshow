@@ -73,28 +73,24 @@ public class TradeshowController {
 			for (BsaRecord bsaRecord : bsaRecords) {
 				Object[] values = new String[columns.size()];
 				for (int i = 0; i < values.length; i++) {
-
+					values[i] = "?";
 					Field field = getField(columns.get(i));
+
 					if (field == null) {
 						log.warn("Unable to updated field [{}]", columns.get(i));
-						values[i] = "?";
-
 						continue;
 					}
 
-					boolean originallyAccessible = field.canAccess(bsaRecord);
+					final int index = i;
+					CsvParser.INSTANCE.getGetter(bsaRecord.getClass(), field.getName(), String.class)
+							.ifPresentOrElse(m -> {
+								try {
+									values[index] = m.invoke(bsaRecord);
+								} catch (Exception e) {
+									log.error("Unable to handle field [{}]", field, e);
+								}
+							}, () -> log.error("Unable to handle field [{}]", field));
 
-					try {
-						field.setAccessible(true);
-						values[i] = field.get(bsaRecord);
-					} catch (Exception e) {
-						log.error("Unable to handle field [{}]", field);
-						values[i] = "?";
-
-						continue;
-					} finally {
-						field.setAccessible(originallyAccessible);
-					}
 				}
 
 				CSVFormat.RFC4180.printRecord(osw, values);

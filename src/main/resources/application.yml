@@ -5,6 +5,10 @@ spring:
     multipart:
       max-file-size: 12Mb
       max-request-size: 12Mb
+      
+logging.level:
+  com.lesuorac: DEBUG 
+      
 bsa:
   views:
     MoneyView.csv:
